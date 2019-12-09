@@ -1,4 +1,4 @@
-##### Create a basic python program which can deployed to AWS lambda. Create linter scripts and unit test coverage
+### Create a basic python program which can deployed to AWS lambda. Create linter scripts and unit test coverage
 
 Make sure python (preferred python3.7) is added to path.
 
