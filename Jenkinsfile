@@ -8,7 +8,7 @@ pipeline {
         }
         stage('stage 2- Install virtualenv'){
             steps {
-                sh 'pip install virtualenv'
+                sh 'pip install --user virtualenv'
             }
         }
         stage('stage 3- Activate Virtualenv'){
