@@ -45,6 +45,9 @@ Create zip file of all library and upload it into AWS lambda function
 change Handler info from AWS Console to below name
 
     src/lambda_handler.lambda_handler ---->this is like (src folder/my_module_name.function_name)
+    
+ 
+Upload lambda_handler.zip file to AWS lambda
 
    
         
