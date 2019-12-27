@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Stage 1 - Check Python version') {
             steps {
-                sh 'python --version'
+                sh 'python3 --version'
             }
         }
         stage('stage 2- Install virtualenv'){
