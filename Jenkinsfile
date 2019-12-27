@@ -13,7 +13,7 @@ pipeline {
         }
         stage('stage 3- Activate Virtualenv'){
             steps {
-                sh 'sudo source env/bin/activatee'
+                sh 'sudo source env/bin/activate'
             }
         }
         stage('stage 4- Install dependency'){
