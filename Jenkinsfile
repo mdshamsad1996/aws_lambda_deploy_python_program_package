@@ -13,17 +13,17 @@ pipeline {
         }
         stage('stage 3- Activate Virtualenv'){
             steps {
-                sh 'sudo source env/bin/activate'
+                sh 'sudo . venv/bin/activate'
             }
         }
         stage('stage 4- Install dependency'){
             steps {
-                sh 'pip install -r requirements.txt -t ./'
+                sh 'sudo pip install -r requirements.txt -t ./'
             }
         }
         stage('stage 5- Run unit test case'){
             steps{
-                sh 'python -m unittest tests/test_lambda_handler.py'
+                sh 'sudo python -m unittest tests/test_lambda_handler.py'
             }
         }
     }
