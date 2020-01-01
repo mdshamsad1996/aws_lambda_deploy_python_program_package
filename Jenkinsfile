@@ -8,17 +8,17 @@ pipeline {
         }
         stage('stage 2- Install virtualenv'){
             steps {
-                sh 'pip install virtualenv'
+                sh 'sudo -H pip install virtualenv'
             }
         }
         stage('stage 3- Activate Virtualenv'){
             steps {
-                sh '. venv/bin/activate'
+                sh 'sudo -H . venv/bin/activate'
             }
         }
         stage('stage 4- Install dependency'){
             steps {
-                sh 'pip install -r requirements.txt -t ./'
+                sh 'sudo -H pip install -r requirements.txt -t ./'
             }
         }
         stage('stage 5- Run unit test case'){
