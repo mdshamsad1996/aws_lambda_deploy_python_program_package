@@ -11,17 +11,22 @@ pipeline {
                 sh 'sudo -H pip install virtualenv'
             }
         }
-        stage('stage 3- Activate Virtualenv'){
+        stage('stage 3- Creating Virtual Environment'){
+            steps{
+                sh ' python3 -m venv env'
+            }
+        }
+        stage('stage 4- Activate Virtualenv'){
             steps {
                 sh 'sudo -H . venv/bin/activate'
             }
         }
-        stage('stage 4- Install dependency'){
+        stage('stage 5- Install dependency'){
             steps {
                 sh 'sudo -H pip install -r requirements.txt -t ./'
             }
         }
-        stage('stage 5- Run unit test case'){
+        stage('stage 6- Run unit test case'){
             steps{
                 sh 'python -m unittest tests/test_lambda_handler.py'
             }
