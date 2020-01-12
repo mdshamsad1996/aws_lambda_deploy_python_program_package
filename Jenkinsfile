@@ -6,6 +6,11 @@ pipeline {
                 sh 'python3 --version'
             }
         }
+        stage('stage 2- Instal virtualenvirnonment'){
+            steps{
+                sh 'pip install virtualenv'
+            }
+        }
         stage('stage 2- Creating Virtual Environment'){
             steps{
                 sh 'virtualenv venv '
