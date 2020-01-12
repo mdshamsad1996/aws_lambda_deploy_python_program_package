@@ -6,32 +6,28 @@ pipeline {
                 sh 'python3 --version'
             }
         }
-        stage('stage 2- python3-pip'){
-            steps{
-                sh 'yum install python3-pip'
-            }
-        }
-        stage('stage 3- Install virtualenv'){
+       
+        stage('stage 2- Install virtualenv'){
             steps {
                 sh 'sudo pip3 install virtualenv '
             }
         }
-        stage('stage 4- Creating Virtual Environment'){
+        stage('stage 3- Creating Virtual Environment'){
             steps{
                 sh 'virtualenv venv '
             }
         }
-        stage('stage 5- Activate Virtualenv'){
+        stage('stage 4- Activate Virtualenv'){
             steps {
                 sh ' . venv/bin/activate'
             }
         }
-        stage('stage 6- Install dependency'){
+        stage('stage 5- Install dependency'){
             steps {
                 sh 'sudo pip install -r requirements.txt -t ./'
             }
         }
-        stage('stage 7- Run unit test case'){
+        stage('stage 6- Run unit test case'){
             steps{
                 sh 'python -m unittest tests/test_lambda_handler.py'
             }
