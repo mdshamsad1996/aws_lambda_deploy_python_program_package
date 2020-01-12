@@ -8,7 +8,7 @@ pipeline {
         }
         stage('stage 2- Instal virtualenvirnonment'){
             steps{
-                sh 'sudo -H pip install virtualenv'
+                sh 'pip install virtualenv'
             }
         }
         stage('stage 2- Creating Virtual Environment'){
