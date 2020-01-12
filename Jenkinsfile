@@ -8,7 +8,7 @@ pipeline {
         }
         stage('stage 2- python3-pip'){
             steps{
-                sh 'sudo apt-get install python3-pip'
+                sh 'yum install python3-pip'
             }
         }
         stage('stage 3- Install virtualenv'){
